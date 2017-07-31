@@ -2,23 +2,15 @@
 
 With this script, a user can create a WiFi hotspot in just a couple of seconds.
 
-Download the script 'Manage-and-create-WiFi-HotSpot.ps1' and execute it.
+Download the script 'Manage-and-create-WiFi-HotSpot.ps1' and execute it:
+- Open script in PowerShell ISE and press 'F5'
+- Copy and paste the code directly into PowerShell and press 'enter'
+
 Use numbers betweeen 1-10 to execute commands.
 
 The script displays a menu with following options:
+![alt tag](http://imgur.com/a/WJVao)
 
-		1. Show available drivers
-		2. View hosted network settings
-		3. Configure Wifi HotSpot
-		4. Show Wireless LAN settings
-		5. Display blocked networks
-		6. Show info about interfaces
-		7. Display all information
-		   - Displays the entire collection of information about wireless 
-         network adapters, wireless profiles and wireless networks
-		8. Start Wifi HotSpot
-		9. Stop Wifi HotSpot
-		10. Exit
     
 If you find any errors, please let me know :-)
 
