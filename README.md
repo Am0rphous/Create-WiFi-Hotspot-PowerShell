@@ -11,7 +11,7 @@ Use numbers betweeen 1-10 to execute commands.
 The script displays a menu with following options:
 ![alt tag](imgur.com/a/WJVao)
 
-![Alt text](imgur.com/a/WJVao "Optional title")
+![Alt text](http://i.imgur.com/2WYmooJ.png "Optional title")
 
 If you find any errors, please let me know :-)
 
