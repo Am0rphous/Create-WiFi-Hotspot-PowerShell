@@ -9,9 +9,7 @@ Download the script 'Manage-and-create-WiFi-HotSpot.ps1' and execute it:
 Use numbers betweeen 1-10 to execute commands.
 
 The script displays a menu with following options:
-![alt tag](imgur.com/a/WJVao)
-
-![Alt text](http://i.imgur.com/2WYmooJ.png "Optional title")
+![Alt text](http://i.imgur.com/8vEzopH.png "Menu")
 
 If you find any errors, please let me know :-)
 
