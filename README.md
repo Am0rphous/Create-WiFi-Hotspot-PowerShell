@@ -10,8 +10,9 @@ Use numbers betweeen 1-10 to execute commands.
 
 The script displays a menu with following options:
 ![alt tag](imgur.com/a/WJVao)
-![](imgur.com/a/WJVao)
-    
+
+![Alt text](imgur.com/a/WJVao "Optional title")
+
 If you find any errors, please let me know :-)
 
 My email: -join('68656E72696A6F684070726F746F6E6D61696C2E636F6D' -split '(?<=\G.{2})',23|%{[char][int]"0x$_"})
