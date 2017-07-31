@@ -1,1 +1,2 @@
-# Create-WiFi-Hotspot-PowerShell
+# Manage and create  a WiFi Hotspot with PowerShell
+
