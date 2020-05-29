@@ -24,7 +24,7 @@
     }
 
     Function Reload_menu_now {
-        $menuOption = 0
+        $menuOption = 0 #It's important to reset variable
         LoadMenu #Calls for the function
     }
 
@@ -34,7 +34,7 @@ Function LoadMenu {
        $t             = "`t`t"   #Each 't' makes a tab space from the left
        $nt            = "`n`t`t" #Makes a new line and two tabulator spaces
     [int] $LastOption = 10       #Total number of options in the menu
-    [string] $MenuBar = "`n=========== Wifi HotSpot with PowerShell - Version 1.0 ==========="
+    [string] $MenuBar = "`n=========== Wifi HotSpot with PowerShell ==========="
 
     #Foreach option in the menu, the script checks if the user has chosen
     #a value less than 1 or an option greater than the last menu option.
@@ -42,7 +42,7 @@ Function LoadMenu {
     #excecute.
 
     while ( $menuOption -lt 1 -or $menuOption -gt $LastOption ) {
-        CLS #Clears the creen
+        CLS #Clears creen
         Write-Host $MenuBar                            -Fore Magenta
         Write-Host "`n`tgithub.com/Am0rphous" 
         Write-Host "$nt`Choose between these options:" -Fore Cyan
@@ -100,7 +100,7 @@ Function LoadMenu {
             If ($?) { Write-Host "`n`tCreated Wifi Hotspot '$SSID' sucessfully" -Fore Green }
 
         } Catch { #If something goes wrong a error message will be displayed
-            Write-Host "`n`tSomething went wrong while creating the hotspot '$SSID'" -Fore Yellow
+            Write-Host "`n`tSomething went wrong while creating the hotspot '$SSID'. Errormessage: " -Fore Yellow
             CatchErrorMessage
         }
 
