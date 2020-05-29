@@ -166,6 +166,8 @@ Function LoadMenu {
         }
 
         Catch { CatchErrorMessage }
+	
+	Prompt_reload_menu
 
     } #Option 5 - Show Wireless LAN settings
 
