@@ -7,9 +7,6 @@
 
     Purpose: Help manage and create wireless networks on Windwos based computers
 
-    A donation is highly appreciated.
-        - Bitcoin address  : 1Eib5FGoWBZv6Pc17LiduLXkf8KEC1DQVc
-        - Litecoin address : Lg2W5qBfaKGshz3w6m7JQ9EHmTsG6haBmW
  #>
 
     function CatchErrorMessage {
