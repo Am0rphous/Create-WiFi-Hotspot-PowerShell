@@ -19,13 +19,13 @@
 
     Function Prompt_reload_menu {
         Read-Host "`tPress 'enter'to go back"
-        $menuOption = 0
-        LoadMenu #Calls for the function
+        $menuOption = 0 #It's important to reset variable
+        LoadMenu
     }
 
     Function Reload_menu_now {
         $menuOption = 0 #It's important to reset variable
-        LoadMenu #Calls for the function
+        LoadMenu
     }
 
 Function LoadMenu {
@@ -240,4 +240,4 @@ Function LoadMenu {
 
 }#End function
 
-    LoadMenu #Calls for the menu
+LoadMenu #Calls for the menu
