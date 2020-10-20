@@ -11,4 +11,5 @@ Check out the [wiki](https://github.com/Am0rphous/Create-WiFi-Hotspot-PowerShell
 Use numbers betweeen 1-10 to execute commands.
 
 The script displays a menu with following options:
+
 ![Alt text](http://i.imgur.com/8vEzopH.png "Menu")
