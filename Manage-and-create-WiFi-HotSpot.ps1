@@ -2,7 +2,7 @@
  <#
     Commands are found and explained at: technet.microsoft.com/en-us/library/cc755301(v=ws.10).aspx
 
-    Author: Henrik Johnsen
+    Author: Am0rphous
     Github: github.com/Am0rphous
 
     Purpose: Help manage and create wireless networks on Windwos based computers
