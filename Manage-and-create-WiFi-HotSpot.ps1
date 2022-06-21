@@ -90,10 +90,24 @@ Function LoadMenu {
                  if ($password.Length -lt 8) { Write-Host "`n`tThe password can't be less than eight characters!" -Fore Red }
         } while ($password -eq "" -or $password.Length -lt 8)
 
-        #Third - Create the network with specified settings
+        #Third - Do you want to broadcast it?
+        Do {
+            Write-Host "`n`tDo you want to brodcast the SSID (name) of network? 'Y' for 'yes' and 'N' for 'no'" -Fore Cyan
+            [string] $Answer = Read-Host "`n`tY/N"
+                 if ($Answer -eq "" -or 
+                     $Answer -ne "y" -and
+                     $Answer -ne "n"
+                 ) { Write-Host "`n`tPlease enter 'y' for 'yes' or 'n' for 'no'" -Fore Red }
+
+        } while ($Answer -ne "y" -and $Answer -ne "n")
+	
+        If ($Answer -eq "n") { $broadcast_SSID = "disallow" }
+        else { $broadcast_SSID = "allow" }
+
+        #Fourth - Create the network with specified settings
         Try {
             Write-Host ""
-            netsh wlan set hostednetwork mode=allow ssid=$SSID key=$password
+            netsh wlan set hostednetwork mode=$broadcast_SSID ssid=$SSID key=$password
 
             #Following code checks if the previous code executed sucessfully and gives 
             #feedback to the user
