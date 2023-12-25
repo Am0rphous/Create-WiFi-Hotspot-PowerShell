@@ -101,13 +101,13 @@ Function LoadMenu {
         If ($Answer -eq "n") { $broadcast_SSID = "disallow" }
         else { $broadcast_SSID = "allow" }
 
+        Write-Host ""
+
         #Fourth - Create the network with specified settings
         Try {
-            Write-Host ""
-            netsh wlan set hostednetwork mode=$broadcast_SSID ssid=$SSID key=$password
 
-            #Checks if executed sucessfully
-            If ($?) { Write-Host "`n`tCreated Wifi Hotspot '$SSID' sucessfully" -Fore Green }
+            netsh wlan set hostednetwork mode=$broadcast_SSID ssid=$SSID key=$password
+            If ($?) { Write-Host "`tCreated Wifi Hotspot '$SSID' sucessfully" -Fore Green }
 
         } Catch { #If something goes wrong a error message will be displayed
             Write-Host "`n`tSomething went wrong while creating the hotspot '$SSID'. Errormessage: " -Fore Yellow
