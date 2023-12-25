@@ -7,6 +7,9 @@
 
 #>
 
+param([string]$parameter)
+
+
 function CatchErrorMessage {
     # `n gives a new line
     # `t makes a tabulator space
@@ -26,9 +29,20 @@ Function Reload_menu_now {
     LoadMenu
 }
 
+    if ($parameter -eq "start") {
+        Write-Host ""
+        $menuOption = 2 # set menu option to 2 to jump to Option 2 - Start Wifi HotSpot
+    } elseif ($parameter -eq "stop") {
+        Write-Host ""
+        $menuOption = 3 # set menu option to 3 to jump to Option 3 - Stop Wifi HotSpot
+    } else {
+        $menuOption = 0 # set default menu option to 0
+    }
+
+
 Function LoadMenu {
     
-    [int] $menuOption = 0        #Resets the menuoptions for each time the menu loads
+    #[int] $menuOption = 0        #Resets the menuoptions for each time the menu loads
           $t          = "`t`t"   #Each 't' makes a tab space from the left
           $nt         = "`n`t`t" #Makes a new line and two tabulator spaces
     [int] $LastOption = 10       #Total number of options in the menu
@@ -140,15 +154,13 @@ Function LoadMenu {
     } #Option 1 - Configure Wifi HotSpot
 
     2 { #Option 2 - Start Wifi HotSpot
-
-        Try { netsh wlan start hostednetwork }
+        Try { netsh wlan start hostednetwork; sleep 3 }
         Catch { CatchErrorMessage }
         Prompt_reload_menu
 
     } #Option 2 - Start Wifi HotSpot
 
     3 { #Option 3 - Stop Wifi HotSpot
-
         Try { netsh wlan stop hostednetwork }
         Catch { CatchErrorMessage }
         Prompt_reload_menu
